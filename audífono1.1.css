@@ -1,0 +1,458 @@
+:root{
+    /*outline: 4px solid red;*/
+    --pink:#e84393;
+    --plomo: #5e6464;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*establece como se calcula el ancho y alto total de un elemento, hace que el padding y el border pasen a formar parte del cálculo del ancho de la caja y no lo suman posteriormente.*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    transition: width none;
+    /*outline: 2px solid rgb(255, 0, 144);*/
+}
+
+html{
+    /*outline: 1px solid blue;*/
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    background: radial-gradient(circle, rgba(255,255,255,1)110%);
+}
+
+section{ /*padding en header y section es igual*/
+    padding: 2rem 9%;
+}
+
+/*.heading{
+    text-align: center;
+    font-size: 4rem;
+    color:#333;
+    padding: 1rem ;
+    margin: 2rem 0;
+    background: #333;
+}
+
+.heading span{
+    color: white;
+}*/
+
+.heading{
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+/*.heading1::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: .01rem;
+    background: rgba(0,0, 0, 0.1);
+    z-index: -1;
+}
+
+.heading1 span{
+    font-size: 3rem;
+    padding: 3rem;
+    background: #fff;
+}*/
+
+
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: violet;
+    color: #fff;
+    padding: 0.9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+.btn:hover{
+    background:#7f00b2;
+}
+
+header{
+    position: fixed; /*fijar el header para que cuando la página baje más se quede ahí*/
+    top: 0; left: 0; right: 0;
+    background: #fff;
+    padding: 2rem 9%; /*2 rem de arriba y abajo, 9% a los costados*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0.5rem 1rem rgba(0,0,0, .1);
+}
+
+header .logo{
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+header .logo span{
+    color: var(--pink);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+    /*outline: 2px solid red;*/
+}
+
+
+.menu-horizontal{
+    /*outline: 2px solid black;*/
+    display: flex;
+    list-style: none;
+}
+
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+}
+
+.menu-horizontal li:hover .menu-vertical{
+    display: block;
+}
+
+
+
+/*hover de menú*/
+header .navbar a:hover{
+    color: #7f00b2;
+}
+
+header .icons a{
+    font-size: 2.5rem;
+    color: #333;
+    margin-left: 1.5rem;
+}
+
+/*hover de iconos*/
+header .icons a:hover{
+    color: #7f00b2;
+
+}
+
+header #toggler{
+    display: none;
+}
+
+header .icon-menu{
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border: 0.1rem solid rgba(0,0,0 0.3);
+    display: none;
+}
+
+
+h4, h2, small, a{
+    margin: 0;
+    padding: 0;
+    color: violet;
+}
+
+span{
+    color: #666;
+}
+
+a{
+    text-decoration: none;
+   
+}
+
+
+.Carousel{
+    width: 100%;
+    margin: 0px 60px;
+    
+    
+    
+}
+
+.Carousel h2{
+    font-size: 26px;
+    line-height: 38px;
+    padding-bottom: 24px;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+    color: #7f00b2;
+    
+}
+
+
+/*images*/
+
+.slick-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 304px;
+    padding: 10px 0px;
+    margin: 0px auto;
+    max-width: 90vw;
+    /*outline: 5px solid red;*/
+    overflow: hidden;
+}
+
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-in-out;
+    
+    
+    
+}
+
+.slick{
+    position: relative;
+    width: 275px;
+    padding: 0 18px;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    /*outline: 2px solid red;*/
+    
+
+}
+
+.slick h4{
+    position: absolute;
+    z-index: 1;
+    font-size: 22px;
+    line-height: 23px;
+    color: #fff;
+    padding: 15px;
+}
+
+
+
+.slick h4 small{
+    font-size: 15px;
+    display: block;
+}
+
+.slick a img{
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 0 rgba(0,0, 0, .5);
+    transition: .3s ease-in-out;
+    /*outline: 2px solid pink;*/
+}
+
+.slick a img:hover{
+    opacity: 0.85;
+}
+
+/*buttons*/
+
+.slick-arrow{
+    /*outline: 1px solid red;*/
+    border-radius: 30px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 4;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0,0, 0, .15);
+    border: 0;
+    cursor: pointer;
+    
+}
+
+
+.slick-arrow:focus{
+    outline: 0;
+}
+
+.slick-arrow svg{
+    width: 12px;
+    height: 100%;
+    color: rgb(0, 0, 0, 0.7);
+    
+}
+
+
+.slick-prev{
+    left: 0px;
+    
+}
+
+.slick-next{
+    right: 0px;
+}
+
+
+
+
+
+
+
+ /*INICIA SESIÓN DE AUDÍFONOS*/
+    
+ 
+
+/*media queries*/
+@media (max-width:991px){
+    html{ 
+        font-size: 55%;
+    }
+
+    header{
+        padding: 2rem;
+        
+        
+    }
+    section{
+        padding: 2rem;
+    }
+
+    .home{
+        background-position: left;
+    }
+    
+    .menu-horizontal{
+        display: flex;
+    }
+
+
+ }
+    
+   
+
+@media (max-width:768px){
+
+    
+    header .icon-menu{
+        display: block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%; left:0; right:0;
+        background: #eee;
+        border-top: 0.1rem solid rgba(0,0, 0, 1); 
+        clip-path: polygon(0 0, 100% 0, 0 0);
+        
+    }
+
+
+    header #toggler:checked~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding:1.5rem;
+        background: #fff;
+        border: 0.1rem solid rgba(0,0, 0, 0.1);
+        display: block;
+        
+    }
+
+    .home .content .h3{
+        font-size: 5rem;
+    }
+
+    .home .content .span{
+        font-size: 2.5rem;
+
+    }
+    .icons-container .icons h3{
+        
+        font-size: 2rem;
+    }
+    
+    .icons-container .icons span{
+        
+        font-size: 1.7rem;
+    }
+
+    .home{
+        flex-flow: column-reverse;
+    }
+
+    .inicio .imgaudifonos img{
+        width: 100%;
+    }
+
+    .imgaudifonos{
+        margin-left: -41rem;
+        margin-top: 5rem;
+    }
+
+   
+    
+
+
+
+
+
+
+
+    @media (max-width:450px){
+        html{
+            
+            font-size: 50%;
+        }
+        .heading{
+            font-size: 3rem;
+        }
+        
+        .slick-list{
+            display: flex;
+        
+        }
+
+
+
+
+    
+    
+        /*header{
+            padding: 2rem;
+        }*/
+    }
+
+}
